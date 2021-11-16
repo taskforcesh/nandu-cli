@@ -1,3 +1,6 @@
+
+![nandu](https://github.com/taskforcesh/nandu/blob/assets/nandu.png?raw=true)
+
 # Nandu CLI
 
 Nandu Open NPM Registry CLI
