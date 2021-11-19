@@ -1,10 +1,10 @@
 import { Command, flags } from "@oclif/command";
 import cli from "cli-ux";
-import axios, { AxiosRequestConfig } from "axios";
+import { AxiosRequestConfig } from "axios";
+import { listTokens } from "../../services/nandu.service";
 
 export default class TokenList extends Command {
   static description = "list tokens for given user";
-
   static examples = [`$ nandu start -p 4567`];
 
   static flags = {
@@ -25,7 +25,6 @@ export default class TokenList extends Command {
 
   async run() {
     const { args, flags } = this.parse(TokenList);
-    const url = `${flags.registry}/-/npm/v1/tokens/org.couchdb.user:${args.user}`;
     const opts: AxiosRequestConfig = {};
 
     let password;
@@ -48,7 +47,7 @@ export default class TokenList extends Command {
 
     try {
       cli.action.start("listing tokens");
-      const { data } = await axios.get(url, opts);
+      const data = await listTokens(flags.registry, args.user, opts);
       cli.action.stop();
       console.log(data.objects);
     } catch (err) {

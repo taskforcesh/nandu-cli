@@ -37,7 +37,7 @@ export default abstract class AuthCommand extends Command {
       if (!flags.token) {
         cli.log("Enter your credentials");
         const username = await cli.prompt("username");
-        password = await cli.prompt("password", { type: "hide" });
+        password = (await cli.prompt("password", { type: "hide" })) as string;
 
         opts.auth = {
           username,

@@ -1,8 +1,8 @@
 import { flags } from "@oclif/command";
 import AuthCommand from "../../auth-command";
+import { addToken } from "../../services/nandu.service";
 
 import cli from "cli-ux";
-import axios from "axios";
 
 export default class TokenCreate extends AuthCommand {
   static description = "create a new token for given user";
@@ -23,22 +23,22 @@ export default class TokenCreate extends AuthCommand {
 
   async run() {
     const { args, flags } = this.parse(this.ctor);
-    const url = `${flags.registry}/-/npm/v1/tokens/org.couchdb.user:${args.user}`;
     const { opts, password } = await this.getCredentials();
 
     const { "cidr-whitelist": cidrWhitelist } = flags;
 
     try {
       cli.action.start("creating token");
-      const { data: token } = await axios.post(
-        url,
-        {
-          password,
-          readonly: flags.readonly,
-          cidr_whitelist: cidrWhitelist ? cidrWhitelist.split(",") : void 0,
-        },
-        opts
+
+      const token = await addToken(
+        flags.registry,
+        args.user,
+        password,
+        opts,
+        flags.readonly,
+        cidrWhitelist
       );
+
       cli.action.stop();
       console.log(`New token created for user ${args.user}`, token);
     } catch (err) {
