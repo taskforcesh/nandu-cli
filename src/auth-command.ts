@@ -18,7 +18,7 @@ export default abstract class AuthCommand extends Command {
     }),
   };
 
-  protected parsedArgs?: OutputArgs<any>;
+  protected parsedArgs?: OutputArgs;
   protected flags?: OutputFlags<typeof AuthCommand.flags>;
 
   async init(): Promise<void> {
