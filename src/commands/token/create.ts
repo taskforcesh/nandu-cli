@@ -1,4 +1,6 @@
 import { flags } from "@oclif/command";
+import { wrapAction } from "../../utils";
+
 import AuthCommand from "../../auth-command";
 import { addToken } from "../../services/nandu.service";
 
@@ -27,7 +29,7 @@ export default class TokenCreate extends AuthCommand {
 
     const { "cidr-whitelist": cidrWhitelist } = flags;
 
-    try {
+    wrapAction(cli.action, async () => {
       cli.action.start("creating token");
 
       const token = await addToken(
@@ -41,10 +43,6 @@ export default class TokenCreate extends AuthCommand {
 
       cli.action.stop();
       console.log(`New token created for user ${args.user}`, token);
-    } catch (err) {
-      cli.action.stop();
-      const { status, statusText } = (<any>err).response;
-      console.error(`Error ${status} ${statusText}`);
-    }
+    });
   }
 }
