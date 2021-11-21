@@ -36,17 +36,18 @@ export const listTokens = async (
 
 export const addUser = async (
   registry: string,
-  userName: string,
+  name: string,
   password: string,
   email: string,
   opts: AxiosRequestConfig<any>
 ) => {
-  const _id = `org.couchdb.user:${userName}`;
+  const _id = `org.couchdb.user:${name}`;
   const url = `${registry}/-/user/${_id}`;
   const { data } = await axios.put(
     url,
     {
       _id,
+      name,
       password,
       email,
       type: "user",
