@@ -14,7 +14,7 @@
     "@oclif/plugin-help": "^3",
     "axios": "^0.24.0",
     "cli-ux": "^5.6.3",
-    "nandu": "^1.2.2",
+    "nandu": "^1.2.3",
     "tslib": "^1"
   },
   "devDependencies": {
