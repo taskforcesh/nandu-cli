@@ -1,3 +1,11 @@
+## [1.0.5](https://github.com/taskforcesh/nandu-cli/compare/v1.0.4...v1.0.5) (2021-11-21)
+
+
+### Bug Fixes
+
+* add user name ([bbef74b](https://github.com/taskforcesh/nandu-cli/commit/bbef74bd67149f7b50272bf1e83e85f217bc021b))
+* upgrade nandu ([e257454](https://github.com/taskforcesh/nandu-cli/commit/e257454a63663c24329dcd200f6de2acb624d75d))
+
 ## [1.0.4](https://github.com/taskforcesh/nandu-cli/compare/v1.0.3...v1.0.4) (2021-11-19)
 
 
