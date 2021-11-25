@@ -4888,10 +4888,10 @@ mute-stream@~0.0.4:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-nandu@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/nandu/-/nandu-1.4.0.tgz#d4df316e212e1312c76d4ac8f7595f06474cadf2"
-  integrity sha512-ZVV3BgiIP7vcRHdIvskWoAbAl5RW/rpL5KNp8S/4eu9HDohRCYyYFRYpJ3wSiwmhPiLFor48QDJYAk2Gh9dfPA==
+nandu@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/nandu/-/nandu-1.4.2.tgz#4d0591c86404a05477c65168527fba9140a5092c"
+  integrity sha512-JlaaMhbUk3FbsJNKgIL76j2QtL8OPJlfNc0yki+JVT1SFCMpO/Wqc2GSX4MtCmPAYjlAYIVYJ5nax7yailOCgg==
   dependencies:
     "@aws-sdk/client-s3" "^3.41.0"
     "@aws-sdk/lib-storage" "^3.41.0"
