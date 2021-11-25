@@ -1,7 +1,7 @@
 {
   "name": "nandu-cli",
   "description": "Nandu Open NPM Registry CLI",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "author": "@taskforcesh",
   "bin": {
     "nandu": "./bin/run"
