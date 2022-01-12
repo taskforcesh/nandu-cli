@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/taskforcesh/nandu-cli/compare/v1.2.2...v1.2.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* upgrade nandu ([361e9d4](https://github.com/taskforcesh/nandu-cli/commit/361e9d49a4b0fc9e511fef682aaa8056aeeb76cb))
+
 ## [1.2.2](https://github.com/taskforcesh/nandu-cli/compare/v1.2.1...v1.2.2) (2021-12-01)
 
 
